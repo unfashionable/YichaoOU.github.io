@@ -8,6 +8,8 @@
 		<title>{{ page.title }}</title>
 		
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/liyc.css">
+
 	</head>
 
 
@@ -16,11 +18,8 @@
 		<!-- This is the navigation bar, please make it simple and clear -->
 		<div class="navigation_bar">
 
-			<ul class="nav nav-pills">
-			  <li role="presentation" class="active"><a href="#">Home</a></li>
-			  <li role="presentation"><a href="#">Profile</a></li>
-			  <li role="presentation"><a href="#">Messages</a></li>
-			</ul>
+			{%include nav_bar.html %}
+
 
 
 		</div> 
@@ -28,7 +27,11 @@
 
 		<!-- This is the header, please add some figures to make it beatiful -->
 		<div class="header">
-			{{ page.abstract }}
+			{% if page.header_keywords_abstract == true %}
+				{%include post_header.html %}
+			{% else %}
+				{%include simple_header.html %}
+			{% endif %}
 
 		</div>
 
@@ -45,12 +48,19 @@
 		<!-- This is the side bar; mainly for readers to keep track our content -->
 		<div class="side_bar">
 
+			{%include header.html %}
+
 		</div>
 
 		<!-- This is the footer; Put your contact and license here -->
 		<div class="footer">
 
+			{%include footer.html %}
+
 		</div>
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
 	</body>
 </html>

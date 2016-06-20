@@ -2,17 +2,17 @@
 name: Yichao Li
 
 author:
-	name: Yichao Li
-	email: yl079811@ohio.edu
-	love_sport: badminton
-	occupation: student
+  name: Yichao Li
+  email: yl079811@ohio.edu
+  love_sport: badminton
+  occupation: student
 
 connect:
-	facebook: https://www.facebook.com/yichao.li.94
-	twitter: https://twitter.com/liyc_OU
-	personal_website: http://www.ohio.edu/people/yl079811/
+  facebook: https://www.facebook.com/yichao.li.94
+  twitter: https://twitter.com/liyc_OU
+  personal_website: http://www.ohio.edu/people/yl079811/
 
 markdown: kramdown
 
 
-permalink: /blog/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title/
