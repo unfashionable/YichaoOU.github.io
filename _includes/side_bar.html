@@ -1,7 +1,7 @@
 
 
 	<ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="320" style="top: 30px;">
-		{% assign total =  page.keywords.size %}
+		{% assign total =  page.keywords.size|minus:1 %}
 		{% for i in (0..total) %}
 			<li ><a href="#{{page.anchors[i]}}" style="height:40px;font-size:20px">  {{page.keywords[i]}} </a></li>
 			
