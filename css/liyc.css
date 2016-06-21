@@ -308,3 +308,55 @@ right:40px;
 
 
 
+
+
+body {
+  margin: 10pt;
+  font-family: "Frutiger", "Verdana Bold", sans-serif;
+}
+
+a:link {
+  color: #003100;
+}
+
+a:visited {
+  color: #003100;
+}
+
+a:hover {
+  color: #003100;
+  text-decoration: none;
+}
+
+a.plain:link {
+  text-decoration: none;
+}
+
+a.plain:visited {
+  text-decoration: none;
+}
+
+a.plain:hover {
+  text-decoration: none;
+}
+
+a.nav:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.nav:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.nav:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+
+.copyright {
+font-size: x-small;
+}
