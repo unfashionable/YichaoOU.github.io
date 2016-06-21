@@ -9,14 +9,17 @@
 		
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="/css/liyc.css">
-
+		<link rel="stylesheet" href="/css/animate.css">
+		<link rel="stylesheet" href="/css/bootstrap-theme.css">
+		<link href="/css/docs.css" rel="stylesheet">
+		
 	</head>
 
 
-	<body>
+	<body data-spy="scroll" data-target="#liyc_bar" data-offset="20">
 
 		<!-- This is the navigation bar, please make it simple and clear -->
-		<div class="navigation_bar">
+		<div class="navigation_bar ">
 
 			{%include nav_bar.html %}
 
@@ -37,20 +40,47 @@
 
 
 
-		<!-- This is the main article, we will use markdown to post content -->
-		<div class="article_main_content">
-		
-		{{ content }}
-		
+
+
+
+
+
+		<div class="container-fluid" >
+			<div class="row " style="margin-top:30px">
+
+				<!-- This is the main article, we will use markdown to post content -->
+				<div class="article_main_content col-sm-9" >
+				
+<!-- 				{% for item in page.keywords %}
+					<h1>{{item}}</h1><br><h1>{{page.keywords.size}}</h1>
+
+				{% endfor %}
+
+				{% for item in page.liyc_array %}
+					<h1>{{item}}</h1><br><h1>{{page.liyc_array.size}}</h1>
+
+				{% endfor %}
+ -->				
+
+				{{ content }}
+				 
+<!-- 				<h1>{{page.keywords[0]}}</h1><br><h1>{{page.liyc_array[0]}}</h1>
+ -->
+				</div>
+
+
+				<!-- This is the side bar; mainly for readers to keep track our content -->
+				<nav class="bs-docs-sidebar col-sm-3" id="liyc_bar">
+
+					{%include side_bar.html %}
+
+				</nav>
+
+
+			</div>
 		</div>
 
 
-		<!-- This is the side bar; mainly for readers to keep track our content -->
-		<div class="side_bar">
-
-			{%include header.html %}
-
-		</div>
 
 		<!-- This is the footer; Put your contact and license here -->
 		<div class="footer">
@@ -61,6 +91,7 @@
 
 		<script type="text/javascript" src="/js/jquery2.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
 
 	</body>
 </html>
