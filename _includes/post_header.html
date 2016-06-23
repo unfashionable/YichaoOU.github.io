@@ -1,0 +1,31 @@
+<div class="container container-fluid ">
+	<div class="row " style="height:289px">
+		
+		<div class="col-md-3 image vertical-align" style="height:289px">
+			<img class="img-responsive img-rounded" style="max-height:250px;margin: 0 auto;" src="/image/{{page.header_image}}">
+		</div>
+
+		<div class="col-md-3 keywords ">
+			<h2>Keywords</h2>
+			<hr style="margin:auto">
+			<ul style="margin-top:10px">
+				{% assign total =  page.header_keywords.size|minus:1 %}
+				{% for i in (0..total) %}
+					<li>{{page.header_keywords[i]}} </a></li>
+					
+				{% endfor %}
+
+			</ul>
+		</div>
+
+		<div class="col-md-6 abstract ">
+			<h2>Abstract</h2>
+			<hr style="margin:auto">
+			<h4>{{page.abstract}}</h4>
+		</div>
+		
+
+	</div>
+
+
+</div>

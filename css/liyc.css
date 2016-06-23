@@ -1,3 +1,17 @@
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.date_align_bottom > *:last-child {
+    vertical-align: bottom;
+    
+}
+.date_align_bottom > * {
+    float: none;
+    font-size: 0;
+    display: inline-block;
+}
 .my-content section {
   background-color: #f5f5f5;
   height: 600px;
@@ -22,6 +36,16 @@
 	text-align: center;
     overflow: hidden;
 
+}
+.abstract{
+    word-wrap: break-word;
+
+}
+
+.list_post_box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: 2px solid green;
 }
 
 .header_box p{
@@ -311,7 +335,6 @@ right:40px;
 
 
 body {
-  margin: 10pt;
   font-family: "Frutiger", "Verdana Bold", sans-serif;
   font-size:20px;
 }
