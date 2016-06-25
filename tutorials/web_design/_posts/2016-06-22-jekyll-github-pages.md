@@ -32,7 +32,28 @@ You can download a cracked version of sublime text following [this link](http://
 
 > http://sublimetext.iaixue.com/dl/
 
-## <kbd> 2. Download Git Bash </kbd> 
+## <kbd> 2. Download Git Bash </kbd>
+
+<!-- <h3  data-target="#collapseOne" data-toggle="collapse"><span class="label label-primary">What is Git ?</span><i class="icon-chevron-up"></i></h3>
+<blockquote  id="collapseOne">asddddddd</blockquote >
+
+ -->
+
+<h3  data-target="#collapseOne" data-toggle="collapse">
+
+	<span class="label label-primary">
+    <span class=" glyphicon glyphicon-plus" style="-webkit-text-stroke: 3px;"></span> 
+    &nbsp; What is Git ?</span>
+
+
+</h3>
+
+<div id="collapseOne" class="panel-collapse collapse panel panel-default">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+</div>
+
 
 Windows users need to install Git Bash. You can download it following [this link](https://git-scm.com/downloads):
 
