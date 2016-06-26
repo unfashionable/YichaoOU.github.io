@@ -2,11 +2,18 @@
 layout: post
 title: Use GitHub Pages to Build Your Blog
 header_keywords_abstract : true
+header_keywords:
+- Sublime Text, Ruby, Bundler & Jekyll
+- Git, GitHub, GitHub Pages
+- Markdown
 keywords:
-- Git
-- GitHub Pages
-- Bundle & Gem
-- Jekyll
+- Installation：ST & Bundler & Jekyll
+- Setup： Git
+- Use：Markdown
+anchors:
+- a1
+- a2
+- a3
 header_image: github_jekyll.jpg
 abstract : Github Pages is a free website server. Your free url will be your_user_name.github.io. It is pretty cool, isn't it?
 ---
@@ -26,7 +33,7 @@ abstract : Github Pages is a free website server. Your free url will be your_use
 > * use `markdown` language to write your first post
 
 
-## <kbd> 1. Download Sublime Text </kbd> 
+## <kbd> 1. Download Sublime Text </kbd> {#a1}
 
 [Sublime Text](https://www.sublimetext.com/) is the greatest text editor ever. However, when working through sftp, I prefer to use `NotePad++`. Because I can't find a good sftp plugin for sublime text. 
 
@@ -90,7 +97,7 @@ We will use bundler to install jekyll. To do this, you need to use a text editor
 
 
 
-## <kbd> 5. Sign up for GitHub </kbd> 
+## <kbd> 5. Sign up for GitHub </kbd> {#a2}
 
 Go to `https://github.com/` to get an account
 
@@ -118,8 +125,37 @@ My repo has a Gemfile so you don't need to create it again. Now, we will install
 > $ bundle exec jekyll serve -w
 
 
-Now, open your browser to `127.0.0.1:4000`. You should be able to see my theme.
+Now, open your browser to `127.0.0.1:4000`. You should be able to see my theme. Try out some of the buttons. 
 
 
-## <kbd> 7. Use MarkDown to write your first post </kbd> 
+## <kbd> 7. Use MarkDown to write your first post </kbd> {#a3} 
+
+Let's use markdown to create our first post. Inside the `MyPostFolder/_posts` folder, create a file named:
+
+> YYYY-MM-DD-my-title.md
+
+(Please change YYYY-MM-DD to the current date).
+
+Now, add the following to your file:
+
+<pre>
+---
+layout: post
+title: Give a title
+header_keywords_abstract : false
+one_sentence: Use one sentence to summarize this post
+header_image: Desert.jpg
+---
+</pre>
+
+<span class="label label-danger">Note!</span> `header_keywords_abstract`, `one_sentence`, and `header_image` are not standard Jekyll variables. I added them myself for my convenience. 
+
+The `header_image` is a file under `/image/` folder.
+
+
+
+
+
+
+
 
