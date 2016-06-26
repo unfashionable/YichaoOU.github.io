@@ -35,9 +35,11 @@
 		<div class="header">
 			{% if page.header_keywords_abstract == true %}
 				{%include post_header.html %}
-			{% else if page.header == just_img_header %}
+			
+			{%  elsif page.header == "just_img_header" %}
 				{%include just_img_header.html %}
-			{% else %}
+			
+			{%  else %}
 				{%include simple_header.html %}
 			{% endif %}
 

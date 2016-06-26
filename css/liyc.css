@@ -370,6 +370,7 @@ body {
 
 a:link {
   color: #003100;
+     font-weight: 600;  
 }
 
 a:visited {

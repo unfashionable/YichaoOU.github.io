@@ -21,23 +21,23 @@ abstract : Github Pages is a free website server. Your free url will be your_use
 >
 > * install `Bundler` and `Jekyll`; they are static site generator
 >
-> * git clone my jekyll theme
+> * `git clone` my jekyll theme
 >
 > * use `markdown` language to write your first post
 
 
 ## <kbd> 1. Download Sublime Text </kbd> 
 
-You can download a cracked version of sublime text following [this link](http://sublimetext.iaixue.com/dl/): 
+[Sublime Text](https://www.sublimetext.com/) is the greatest text editor ever. However, when working through sftp, I prefer to use `NotePad++`. Because I can't find a good sftp plugin for sublime text. 
+
+You can download a cracked version of sublime text (not working in my Mac) following [this link](http://sublimetext.iaixue.com/dl/): 
 
 > http://sublimetext.iaixue.com/dl/
 
-## <kbd> 2. Download Git Bash </kbd>
 
-<!-- <h3  data-target="#collapseOne" data-toggle="collapse"><span class="label label-primary">What is Git ?</span><i class="icon-chevron-up"></i></h3>
-<blockquote  id="collapseOne">asddddddd</blockquote >
 
- -->
+## <kbd> 2. Install Git </kbd>
+
 
 <h3  data-target="#collapseOne" data-toggle="collapse">
 
@@ -50,7 +50,7 @@ You can download a cracked version of sublime text following [this link](http://
 
 <div id="collapseOne" class="panel-collapse collapse panel panel-default">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       Git is a version control command. In plain English, Git allows you to undo every editing. In other words, you can go back to every version that you have commited. 
       </div>
 </div>
 
@@ -59,9 +59,17 @@ Windows users need to install Git Bash. You can download it following [this link
 
 > https://git-scm.com/downloads
 
+Mac users just need to type `git` in your terminal and it will come up an installation box if you haven't installed `git`.
+
+Iterm is a good replacement terminal for Mac users. Please check out my other post about [iterm.]({% post_url 2016-06-25-iterm-setup %})
+
 ## <kbd> 3. Install Ruby </kbd>
 
-For MAC users, please install Ruby using the following command:
+For MAC users, first install brew. Paste the following line to your Terminal:
+
+> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Then, please install Ruby using the following command:
 
 >  $ brew install ruby
 
@@ -82,11 +90,9 @@ We will use bundler to install jekyll. To do this, you need to use a text editor
 
 
 
-
-
 ## <kbd> 5. Sign up for GitHub </kbd> 
 
-Go to `https://github.com/` to register an account
+Go to `https://github.com/` to get an account
 
 
 
@@ -97,7 +103,7 @@ Go to `https://github.com/` to register an account
 
 ## <kbd> 6. Git clone my Jekyll theme </kbd> 
 
-Find a folder that you would like to work. This is typical to be `~/Document`. In the terminal, `cd` to your folder and `git clone` my repo following:
+Find a folder that you would like to work. This is typical to be `~/Document`. In the terminal, `cd` to your folder and `git clone` my repo using the following command:
 
 > $ git clone https://github.com/YichaoOU/jekyll_theme_liyc.git
 

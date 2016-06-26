@@ -14,6 +14,7 @@ anchors:
 - a2
 - a3
 - a4
+abstract: iterm is an outstanding terminal for Mac OS
 ---
 
 > In this tutorial, you will:
