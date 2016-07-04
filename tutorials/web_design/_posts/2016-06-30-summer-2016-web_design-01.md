@@ -4,9 +4,15 @@ title: 如何使用Jekyll并在GitHub Pages上发布自己的网站
 header_keywords_abstract : false
 header_image: octojekyll.png
 keywords:
-- Installation：ST & Bundler & Jekyll
-- Setup： Git
-- Use：Markdown
+- 配置IDE
+- 使用Jekyll
+- Markdown语法
+- 配置Github
+anchors:
+- a1
+- a2
+- a3
+- a4
 one_sentence: 2016 Summer Web Design 第一课
 check: <span style="font-size:40px">☐</span>
 todo: <span class="label label-danger">TO DO</span>
@@ -38,7 +44,9 @@ todo: <span class="label label-danger">TO DO</span>
 
 <hr>
 
-工欲善其事必先利其器。你们要想使用我，必须有一套非常顺手的IDE。下面我向大家介绍我的一套装备: `Sublime Text` + `Git Bash` (Win) + `Iterm` (Mac) + `Ruby` + `Bundle` + `Jekyll` + `Git`. 我给大家准备了to do list，你们每安装完成一件，就请在checkbox中打钩。
+     
+
+####  工欲善其事必先利其器。你们要想使用我，必须有一套非常顺手的IDE。下面我向大家介绍我的一套装备: `Sublime Text` + `Git Bash` (Win) + `Iterm` (Mac) + `Ruby` + `Bundle` + `Jekyll` + `Git`. 我给大家准备了to do list，你们每安装完成一件，就请在checkbox中打钩。  {#a1}
 
 {{page.check}} **安装Sublime Text**
 
@@ -99,7 +107,7 @@ gem "github-pages"</pre>
 
 <hr>
 
-你们安装成功了么？我是基于Ruby编程语言建立的。我主要有两个command：
+#### 你们安装成功了么？我是基于Ruby编程语言建立的。我主要有两个command：   {#a2}
 
 > `bundle exec jekyll new Give_a_website_name`
 >
@@ -247,7 +255,7 @@ title: 这是写这篇文章的名字
 
 {{page.check}} **学习markdown**
 
-其实，我们可以使用一个很简单的方法来代替`<h1>`标签，那就是markdown。
+#### 其实，我们可以使用一个很简单的方法来代替`<h1>`标签，那就是markdown。    {#a3}
 
 我们再回来编辑我们的post，删除`<h1>`标签，在这一行最前面输入`#`。再回来刷新页面，你们看到了什么？是不是没有变化？因为`<h1>`与`#`是等效的。你们可以再试试`###`？是不是字体变小了？
 
@@ -319,7 +327,7 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 {{page.check}} 建立第一个Github Project Page
 
-下面，你们要注册一个Github账号，[https://github.com/](https://github.com/)
+####   下面，你们要注册一个Github账号，[https://github.com/](https://github.com/)    {#a4}
 
 注册完成后，新建一个**repo**，把他命名为`2016_summer_web_design`，然后点击Create repository.
 
