@@ -48,9 +48,15 @@ todo: <span class="label label-danger">TO DO</span>
 
 ####  工欲善其事必先利其器。你们要想使用我，必须有一套非常顺手的IDE。下面我向大家介绍我的一套装备: `Sublime Text` + `Git Bash` (Win) + `Iterm` (Mac) + `Ruby` + `Bundle` + `Jekyll` + `Git`. 我给大家准备了to do list，你们每安装完成一件，就请在checkbox中打钩。  {#a1}
 
-{{page.check}} **安装Sublime Text**
+{{page.check}} **安装Sublime Text 3**
 
-请点击这个网址下载: [https://www.sublimetext.com/](https://www.sublimetext.com/). Windows用户可以下载破解版：[http://sublimetext.iaixue.com/dl/](http://sublimetext.iaixue.com/dl/)
+请点击这个网址下载: [https://www.sublimetext.com/](https://www.sublimetext.com/). Windows用户可以下载破解版(推荐安装破解版，不然总弹出广告)：[http://sublimetext.iaixue.com/dl/](http://sublimetext.iaixue.com/dl/)
+
+也可以手动输入序列号，网址[http://appnee.com/sublime-text-3-universal-license-keys-collection-for-win-mac-linux/](http://appnee.com/sublime-text-3-universal-license-keys-collection-for-win-mac-linux/)
+
+安装ST3 Package Control，网址[https://packagecontrol.io/installation](https://packagecontrol.io/installation)
+
+安装Emmet。`ctrl/⌘ + shift + p`打开command pallette。输入install，点击`PackageControl:Install Package`，然后在输入Emmet，点击Emmet进行安装。最后重启ST3。
 
 {{page.check}} **安装命令行工具**
 

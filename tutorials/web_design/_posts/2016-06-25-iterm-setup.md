@@ -80,4 +80,4 @@ Restart your `iterm` and copy and paste the following line to your iterm and hit
 
 Here you go. You should get a similar appearance like my [first image](#my_first_image).  
 
-
+Added, iterm2 cheetsheet [https://gist.github.com/helger/3070258](https://gist.github.com/helger/3070258) 
