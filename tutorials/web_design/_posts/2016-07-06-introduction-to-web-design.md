@@ -95,7 +95,10 @@ tuts更偏重兴趣，比如有sublime text的完全教程
 
 
 
+网页的布局形式多种多样，比较常见的是下面这种：
 
 
+![layout](/image/simple_layout.gif)
 
 
+个人博客主要是文字和图片，所以markdown成为了流行的博客语言。
