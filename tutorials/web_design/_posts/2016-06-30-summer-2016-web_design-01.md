@@ -50,7 +50,7 @@ todo: <span class="label label-danger">TO DO</span>
 
 {{page.check}} **安装Sublime Text 3**
 
-请点击这个网址下载: [https://www.sublimetext.com/](https://www.sublimetext.com/). Windows用户可以下载破解版(推荐安装破解版，不然总弹出广告)：[http://sublimetext.iaixue.com/dl/](http://sublimetext.iaixue.com/dl/)
+请点击这个网址下载: [https://www.sublimetext.com/](https://www.sublimetext.com/).<del> Windows用户可以下载破解版(推荐安装破解版，不然总弹出广告)：[http://sublimetext.iaixue.com/dl/](http://sublimetext.iaixue.com/dl/)</del>
 
 也可以手动输入序列号，网址[http://appnee.com/sublime-text-3-universal-license-keys-collection-for-win-mac-linux/](http://appnee.com/sublime-text-3-universal-license-keys-collection-for-win-mac-linux/)
 
