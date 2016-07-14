@@ -1205,7 +1205,8 @@ h1[id] {
 }
 .highlight pre code {
   font-size: inherit;
-  color: #333; /* Effectively the base text color */
+  /*color: #333;  Effectively the base text color */
+  color: #9bb9ff;
 }
 .highlight pre code:first-child {
   display: inline-block;
