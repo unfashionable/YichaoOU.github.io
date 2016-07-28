@@ -36,50 +36,74 @@ todo: <span class="label label-danger">TO DO</span>
 
 # 创建导航栏
 
-首先写下html文档的基本样子，可以直接用快捷键：先输入`!`，在按下`TAB`键。
+首先写下html文档的基本样子。可以直接用快捷键：**先输入`!`，再按下`TAB`键。**
 
 {{page.todo}} 在`<head>`中引入css和js
 
-{{page.todo}} 在`<body>`中，用`<div>`建立其博客的框架，例如：
+{% highlight html %}
+
+<head>
+	#### 快捷键 link ####
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/bootstrap-theme.css">
+	#### 快捷键 script:src ####
+	<script src="./js/jquery-2.0.0.js"></script>
+	#### 注意jQuery一定要在bootstrap.js的前面 ####
+	<script src="./js/bootstrap.js"></script>
+
+</head>
+
+{% endhighlight %}
+
+{{page.todo}} 在`<body>`中，用`<div>`建立博客的框架。html网页里，div是使用最多的tag，因为`<div>`如果不定义大小的话，它不会改变网页的样子。因此，使用div可以帮助程序猿写出更易懂的code。
+
+我们将用div把网页分成4大部分，分别是nav，header，content，和footer。
+
+我们给div添加name属性，来描述这个div是做什么用的。并且，在结尾的div处，标明这个是什么div的结尾。例如：
 
 
 {% highlight html %}
 
 <body>
 
+	#### 建立导航栏 ####
 	<!-- Navigation bar -->
 	<div name="this is navigation bar">
 		
 	</div>  <!-- END Navigation bar -->
+	#### 注意，一定要标明这个div是什么的结尾，不然太多的结尾符很容易混 ####
 
+	#### 下面是网站header ####
 	<!-- Header -->
 	<div name="this is header">	
 
 	</div>  <!-- END Header -->
 
+	#### 网站的主要内容 ####
 	<!-- content -->
 	<div name="content" >
 		
 	</div> <!-- END content -->
 
-
+	#### 网站的底栏 ####
 	<!-- footer -->
 	<div name="footer">
 		
-
 	</div>  <!-- END footer -->
 
 </body>
 
 
-
 {% endhighlight %}
 
-导航栏的语法是：
+现在，我们开始创建导航栏。导航栏的语法是`<nav>`
 
 {% highlight html %}
 
+#### navbar navbar-default 定义了一些位置和颜色属性，没有也是可以的 ####
 <nav class="navbar navbar-default">
+	#### container定义了div的宽度 ####
+	#### container-fluid实现了响应式的布局 ####
 	<div class="containter containter-fluid">
 		
 
@@ -89,8 +113,6 @@ todo: <span class="label label-danger">TO DO</span>
 	</div>
 
 </nav>
-
-
 
 {% endhighlight %}
 
@@ -107,11 +129,11 @@ todo: <span class="label label-danger">TO DO</span>
 
 {% endhighlight %}
 
-第二个是导航按键。他们都是`<ul><li>`的格式，如：
+第二个是导航按键。他们都是`<ul class="nav navbar-nav"><li><a>`的格式，如：
 
 {% highlight html %}
 
-
+#### 快捷键 ul.nav.navbar-nav.navbar-left>li*2>a[#]{link$} ####
 <ul class="nav navbar-nav navbar-left">
 	<li><a href="#">link1</a></li>
 	<li><a href="#">link2</a></li>
@@ -121,14 +143,22 @@ todo: <span class="label label-danger">TO DO</span>
 {% endhighlight %}
 
 
-最后一个是导航下拉菜单。他们也都是`<ul><li>`的格式，如：
+最后一个是导航下拉菜单。他们是`<ul class="nav navbar-nav"><li class="dropdown"><a>`的格式，如：
 
 {% highlight html %}
 
+#### 快捷键 ul.nav.navbar-nav.navbar-right>li.dropdown>a[#]{my links}>span.caret^+ul.dropdown-menu>li*3>a[#]{link$} ####
 
+#### 快捷键用的是emmet插件：.表示class的名字; >表示下一级； ^表示返回上一级；*表示要多少个相同的标签；$表示自动增加数字
 <ul class="nav navbar-nav navbar-right">
 	<li class="dropdown">
+
+		#### data-toggle定义了数据展现的方式 ####
+		#### aria-haspopup定义了是否出现下拉菜单 ####
+		#### span class="caret"是一个向下的箭头 ####
+
 		<a href="#" data-toggle="dropdown"  aria-haspopup="true">my links <span class="caret"></span></a>
+		#### 下拉菜单里的具体内容 ####
 		<ul class="dropdown-menu">
 			<li><a href="#">link1</a></li>
 			<li><a href="#">link2</a></li>
@@ -205,7 +235,7 @@ todo: <span class="label label-danger">TO DO</span>
 
 首先，我们给header的div一个class名字，`<div class="myHeader">`。
 
-然后，我们在css中给这个class加图片。在css文件夹下，新建`liyc.css`，起个名字让你能立刻找到你自己写的css。
+然后，我们在css中给这个class加图片。在css文件夹下，新建`liyc.css`，并在header中引入你的css。
 
 在这个css文件中输入：
 
@@ -216,12 +246,12 @@ todo: <span class="label label-danger">TO DO</span>
 	height: 650px;
 	width: 100%;	
 	/* background-image: linear-gradient(0deg,#023D09,#0E3312); */
+	#### 一个.表示本级目录，两个.表示上一级的目录 ####
+	#### 此时我们的liyc.css是在CSS文件夹下，因此要找到header.jpg必须使用.. ####
 	background-image: url(../image/header.jpg);
 	background-size: 100% 100%;
 	color:white;  #### 与font-color一样，就是前景色的颜色 ####
-	
 }
-
 
 {% endhighlight %}
 
@@ -232,7 +262,6 @@ todo: <span class="label label-danger">TO DO</span>
 
 {% highlight html %}
 
-<!-- Header -->
 <div name="this is header" class="myHeader">
 
 	<div class="container container-fluid">
@@ -263,12 +292,11 @@ todo: <span class="label label-danger">TO DO</span>
 
 	</div>
 	
-
-
 </div>
 
 {% endhighlight %}
 
+再给我们的图片加一点特效：
 
 {% highlight css %}
 
@@ -281,7 +309,6 @@ todo: <span class="label label-danger">TO DO</span>
 
 }
 
-
 {% endhighlight %}
 
 
@@ -291,7 +318,6 @@ footer里放的一般都是copyright神马的，再加上一些链接。写起�
 
 {% highlight html %}
 
-<!-- footer -->
 <div name="footer" style="margin-top:30px;" class="container">
 
 	<hr> #### 加一条线，以示分割 ####
@@ -435,18 +461,13 @@ study所对应的主页是/study/index.html，在这里我要罗列出所有的p
 
 {% highlight html %}
 
-<!-- content -->
 <div name="content" class="container" style="margin-top:30px;">
 	<ul>
 		<li><a href="./post1.html">我这是第一个post</a></li>
 		<li><a href="./post2.html">我这是第二个post</a></li>
 		<li><a href="./post3.html">我这是第三个post</a></li>
 	</ul>
-
-
-
 </div>
-
 
 {% endhighlight %}
 
@@ -476,8 +497,6 @@ study所对应的主页是/study/index.html，在这里我要罗列出所有的p
 
 	</div>
 	
-
-
 </div>
 {% endhighlight %}
 
@@ -508,7 +527,7 @@ study所对应的主页是/study/index.html，在这里我要罗列出所有的p
 
 {% endhighlight %}
 
-另外，由于我们在study这个category下，我们可以给navbar study这个条目加一个active class来提醒读者，我们现在所在的位置。
+另外，由于我们在study这个category下，我们可以给navbar study这个条目加一个active class来告诉读者我们现在所在的位置。
 
 
 ## 写post1.html
@@ -566,9 +585,6 @@ div.group#groupA>div#subgroupA$.subgroup*2>h4{Group A sub $}
 
 
 下面开始做边栏：
-
-
-
 
 {% highlight html %}
 	
@@ -659,21 +675,11 @@ div.group#groupA>div#subgroupA$.subgroup*2>h4{Group A sub $}
 }
 
 
-
-
 {% endhighlight %}
 
 
 
 {{page.todo}} 写post2.html。参照http://getbootstrap.com/css/，用html写出此页面。
-
-
-注意bootstrap table的用法。
-
-
-
-
-
 
 
 
