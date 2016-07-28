@@ -614,6 +614,13 @@ div.group#groupA>div#subgroupA$.subgroup*2>h4{Group A sub $}
 		</ul>
 	</div> <!-- END col3 -->
 
+	<script>
+	$('body').scrollspy({
+		target:'#liyc_bar',
+		offset:40
+	});
+	</script>
+
 
 {% endhighlight %}
 
