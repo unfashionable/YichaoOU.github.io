@@ -512,7 +512,6 @@ study所对应的主页是/study/index.html，在这里我要罗列出所有的p
 
 .intro_text{
 	font-size:30px;
-	text-shadow: 4px 3px 0 #1d9d74,9px 8px 0 rgba(0,0,0,0.15);
 }
 
 .header_box img:hover{
@@ -650,9 +649,8 @@ div.group#groupA>div#subgroupA$.subgroup*2>h4{Group A sub $}
 	padding-left: 20px;
 }
 
-#liyc_bar .active > a,
-#liyc_bar .active > a:hover,
-#liyc_bar .active > a:focus {
+#liyc_bar .active > a
+{
 
 	color: #563d7c;
     text-decoration: none;          
