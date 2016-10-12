@@ -1210,7 +1210,7 @@ h1[id] {
 }
 .highlight pre code:first-child {
   display: inline-block;
-  padding-right: 45px;
+  /*padding-right: 45px;*/
 }
 
 
