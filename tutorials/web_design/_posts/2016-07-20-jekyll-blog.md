@@ -25,6 +25,8 @@ todo: <span class="label label-danger">TO DO</span>
 
 {{page.check}} 现在，用ST3打开你的网站文件夹，我们来新建几个文件夹，分别是：
 
+css, image, js 可以直接从上节课的目录中copy过来
+
 > _layouts
 >
 > _includes
@@ -273,12 +275,13 @@ header_iamge: post1.png
 ---
 layout: default
 ---
-<h1>{/{ page.title }}</h1>
-<hr>
-<div class="post">
-  <div class="container container-fluid">
+
+
+  <div class="container container-fluid" style="word-wrap: break-word;">
   	<div class="row">
   		<div class="col-xs-9">
+  			<h1>{/{ page.title }}</h1>
+  			<hr>
   			{/{ content }}
   		</div>
   		<div class="col-xs-3 hidden-xs hidden-sm" id="post_sidebar">
@@ -286,7 +289,7 @@ layout: default
   		</div>
   	</div>
   </div>
-</div>
+
 {% endhighlight %}
 
 
@@ -294,36 +297,83 @@ layout: default
 
 {% highlight html %}
 
-{ \% assign total =  page.keywords.size|minus:1 %}
-{ \% if total > 0 %}
-{ \% assign i = 0 %}
-	<ul class="nav nav-stacked " data-spy="affix" data-offset-top="320" style="top: 30px;">
-		{ \% unless i == total %}
+{ /% assign total =  page.keywords.size|minus:1 %}
+{ /% if total > 0 %}
+
+	<ul class="nav" data-spy="affix" data-offset-top="320" style="top: 30px;">
 		
-			<li ><a href="#{{page.anchors[i]}}" style="font-size:20px">  {{page.keywords[i]}} </a></li>
-			{ \% if page.subkeywords[i] == "true" %}
-				<ul class="nav nav-stacked">
-					{ \% assign my_array = page.subkeywords[i+1] | split: "|" %}
-					{ \% for item in my_array %}
-						<li><a href="{/{item}}">{/{item}}</a></li>
-					{ \% endfor %}
-				</ul>
-			{ \% endif %}
-		{ \% i = i + 1 %}
-		{ \% endunless %}
-
-
-
-
+		{ /% for i in (0..total) %}
+			<li ><a href="#{{page.anchors[i]}}" style="font-size:20px">  {/{page.keywords[i]}} </a></li>
+			
+		{ /% endfor %}
 	</ul>
-{ \% endif %}
+
+<script>
+	$('body').scrollspy({
+		target:'#post_sidebar',
+		offset:40
+	});
+</script>
+
+{ /% endif %}
+
 
 {% endhighlight %}
  
 
 
 
+在一个post中，我们就可以这样使用了：
 
+{% highlight html %}
+
+---
+layout: post
+title: post3
+abstract: this is post 3 whatever
+header_image: pikachu.png
+header: category1
+keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+anchors:
+- a1
+- a2
+- a3
+---
+
+
+# keyword 1 {#a1}
+
+![img](/image/spring.jpg)
+![img](/image/spring.jpg)
+![img](/image/spring.jpg)
+
+# keyword 2 {#a2}
+
+![img](/image/spring.jpg)
+![img](/image/spring.jpg)
+![img](/image/spring.jpg)
+
+# keyword 3 {#a3}
+
+![img](/image/spring.jpg)
+
+![img](/image/spring.jpg)
+![img](/image/spring.jpg)
+
+{% endhighlight %}
+
+好，我们的web design课程就到这里结束了。主要是教会了大家：
+
+1. 如何使用html模板
+
+2. 如何在github上部署自己的网站
+
+3. 一个网站的布局
+
+4. 怎么做一个简单的博客
 
 
 

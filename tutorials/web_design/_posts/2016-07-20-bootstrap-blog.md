@@ -526,8 +526,6 @@ study所对应的主页是/study/index.html，在这里我要罗列出所有的p
 
 {% endhighlight %}
 
-另外，由于我们在study这个category下，我们可以给navbar study这个条目加一个active class来告诉读者我们现在所在的位置。
-
 
 ## 写post1.html
 
@@ -586,92 +584,75 @@ div.group#groupA>div#subgroupA$.subgroup*2>h4{Group A sub $}
 下面开始做边栏：
 
 {% highlight html %}
-	
-	#### 加上hidden-xs hidden-sm，让我们的边栏在屏幕过小时隐藏 ####
-	<div class="col-xs-3 hidden-xs hidden-sm " id="liyc_bar">
 
+	#### 加上hidden-xs hidden-sm，让我们的边栏在屏幕过小时隐藏 ####
+	<div class="col-xs-3 hidden-xs hidden-sm" id="liyc_bar">
 
 		#### 加上data-spy="affix"，让我们的边栏固定住 ####
-		<ul class="nav nav-stacked"  data-spy="affix" data-offset-top="320" style="top: 30px;">
-
-			<li><a href="#GroupA">Group A</a>
-
-				#### nav-stacked让ul的item没有bullet ####
-				<ul class="nav nav-stacked">
-					<li><a href="#GroupASub1">Group A Sub 1</a></li>
-					<li><a href="#GroupASub2">Group A Sub 2</a></li>
+		<ul class="nav" data-spy="affix" style="top:30px;" data-offset-top="332">
+			<li><a href="#groupA">组A</a>
+				<ul>
+					<li><a href="#subgroupA1">小分区A1</a></li>
+					<li><a href="#subgroupA2">小分区A2</a></li>
 				</ul>
-			</li>
-			<li><a href="#GroupB">Group B</a>
-			<ul class="nav nav-stacked">
-				<li><a href="#GroupBSub1">Group B Sub 1</a></li>
-				<li><a href="#GroupBSub2">Group B Sub 2</a></li>
-			</ul>
-			</li>
-			<li><a href="#GroupC">Group C</a>
-			<ul class="nav nav-stacked">
-				<li><a href="#GroupCSub1">Group C Sub 1</a></li>
-				<li><a href="#GroupCSub2">Group C Sub 2</a></li>
-			</ul>			
-			</li>
 
+			</li>
+			<li><a href="#groupB">组B</a>
+				<ul>
+					<li><a href="#subgroupB1">小分区B1</a></li>
+					<li><a href="#subgroupB2">小分区B2</a></li>
+				</ul>
+
+			</li>
+			<li><a href="#groupC">组C</a>
+				<ul>
+					<li><a href="#subgroupC1">小分区C1</a></li>
+					<li><a href="#subgroupC2">小分区C2</a></li>
+				</ul>
+
+			</li>
 		</ul>
-
-	</div>
+	</div> <!-- END col3 -->
 
 	<script>
 	$('body').scrollspy({
-	    target: '#liyc_bar',
-
-	    #### 锚定离browser最高点多少时，开始计算 ####
-	    offset: 40
+		target:'#liyc_bar',
+		offset:40
 	});
 	</script>
+
 
 {% endhighlight %}
 
 
 {% highlight css %}
 	
-#liyc_bar{
-	margin-top: 20px;
+#liyc_bar li{
+	list-style: none;
 }
 
-#liyc_bar a{
-	padding:2px;
+#liyc_bar ul li>ul{
+	padding-left: 0px;
 }
 
-#liyc_bar > .nav > li > a{
-	font-size:20px;
+#liyc_bar ul ul>li>a{
+	padding-left:30px;
 }
 
-#liyc_bar .nav  .nav>li>a{
-	padding-left: 20px;
-}
-
-#liyc_bar .active > a
-{
-
-	color: #563d7c;
-    text-decoration: none;          
-    background-color: transparent;  
-    border-left: 2px solid #563d7c;
+#liyc_bar .active>a{
+	color:purple;
+	border-left: 2px dotted purple;
+	border-radius: 20px;
 	font-weight: bold;
 }
 
-#liyc_bar a{
-	border-left: 2px solid transparent;
-	font-weight: normal;
+#liyc_bar ul ul>li{
+	display: none;
 }
 
-#liyc_bar .nav .nav>li>a{
-	display:none;
-}
-
-#liyc_bar .active .nav>li>a{
+#liyc_bar .active ul>li{
 	display: block;
 }
-
 
 {% endhighlight %}
 
